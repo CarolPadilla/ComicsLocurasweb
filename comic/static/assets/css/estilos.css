@@ -1,0 +1,180 @@
+/* Fondo completo negro */
+
+/* Animación de zoom y cambio de color */
+@keyframes zoomColorChange {
+    0% {
+        transform: scale(0.8);
+        color: #FF00C8; /* Rosa inicial */
+    }
+    50% {
+        transform: scale(1.1);
+        color: #00FF99; /* Verde brillante */
+    }
+    100% {
+        transform: scale(1);
+        color: #FF00C8; /* Vuelve al color inicial */
+    }
+}
+
+/* Estilo para el título */
+.title {
+    color: #FF00C8; /* Rosa fuerte para el título */
+    font-size: 4.5em; /* Tamaño del título */
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive; /* Fuente estilo cómic */
+    text-shadow: 5px 5px 15px rgba(255, 0, 255, 0.8), 0 0 30px #FF00EA; /* Sombra brillante */
+    letter-spacing: 5px; /* Espaciado entre letras */
+    font-weight: bold; /* Negrita */
+    animation: zoomColorChange 3s ease-in-out infinite; /* Animación de zoom y cambio de color */
+}
+
+
+
+
+
+
+
+
+
+body {
+    background-color: #000000; /* Fondo completamente negro */
+    color: #ffffff; /* Blanco para el texto */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed; /* Fijo para que no se mueva al hacer scroll */
+}
+
+/* Contenedor principal */
+.center-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para el logo más pequeño */
+.logo-container img {
+    width: 150px;  /* Logo más pequeño */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;  /* Bordes redondeados para un toque más moderno */
+    box-shadow: 0 4px 15px rgba(255, 50, 192, 0.6); /* Sombra rosa suave para resaltar */
+}
+
+/* Título con estilo de cómic y más impactante, tamaño reducido */
+.title {
+    color: #FF00C8; /* Rosa fuerte para un título vibrante */
+    font-size: 4.5em;  /* Hacemos el título un poco más pequeño */
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive; /* Fuente cursiva, más bonita y estilo cómic */
+    text-shadow: 5px 5px 15px rgba(255, 0, 255, 0.8), 0 0 30px #FF00EA; /* Sombra brillante */
+    letter-spacing: 5px; /* Espaciado entre letras para mayor impacto */
+    font-weight: bold;  /* Más negrita para un mejor contraste */
+}
+
+/* Descripción con fuente de cómic más bonita y estilo cursiva */
+.description {
+    color: #F2F2F2; /* Blanco muy suave para contraste sin ser tan fuerte */
+    font-size: 1.5em;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-family: 'Caveat', cursive, sans-serif; /* Fuente de cómic cursiva */
+    padding: 0 20px;  /* Agregar algo de padding para que no se vea apretado */
+}
+
+/* Galería de tarjetas con transición suave */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Estilo para las tarjetas más pequeñas */
+.card {
+    background-color: #333333; /* Gris oscuro */
+    color: #ffffff;
+    border-radius: 10px;  /* Bordes redondeados para suavizar el diseño */
+    padding: 10px;
+    text-align: center;
+    width: 200px;  /* Hacer las tarjetas más pequeñas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Sombra de profundidad */
+    margin-bottom: 40px; /* Margen inferior para dar espacio entre tarjetas */
+}
+
+/* Efecto hover para resaltar la tarjeta */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.7); /* Efecto rosa fuerte */
+    background-color: #5e4b8b; /* Fondo morado brillante cuando se pasa el ratón */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto en la imagen al pasar el ratón */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Nombre de la categoría con color alusivo */
+.card h5 {
+    color: #FF69B4; /* Rosa fuerte */
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;  /* Letras mayúsculas para dar fuerza */
+}
+
+/* Añadir un pie de página con el mismo estilo */
+footer {
+    background-color: #333333; /* Gris oscuro */
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Botón destacado para interacción */
+button {
+    background-color: #FF4500; /* Naranja brillante */
+    color: #ffffff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #9b59b6; /* Cambio a morado brillante al pasar el ratón */
+}
+
+/* Agregar márgenes a las secciones */
+h1, p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Estilo para la galería en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
