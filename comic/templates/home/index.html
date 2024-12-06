@@ -11,48 +11,153 @@
     <link rel="stylesheet" href="{% static 'assets/css/estilos.css' %}">
 </head>
 
-<body>
-    <div class="center-content">
+<body class="bg-dark text-white">
+    <div class="container text-center py-5">
         <!-- Logo -->
-        <div class="logo-container">
-            <img src="{% static 'assets/img/icon.png' %}" alt="ComicsLocuras Logo">
+        <div class="mb-4">
+            <img src="{% static 'assets/img/icon.png' %}" alt="ComicsLocuras Logo" class="img-fluid" style="max-width: 150px;">
         </div>
 
         <!-- Título -->
-        <h1 class="title">Bienvenidos a ComicsLocuras</h1>
+        <h1 class="display-4 mb-4">Bienvenidos a ComicsLocuras</h1>
 
         <!-- Descripción -->
-        <p class="description">
+        <p class="lead mb-5">
             Bienvenidos a ComicsLocuras, el lugar donde tus personajes favoritos cobran vida. Descubre una increíble
             variedad de cómics, mangas, peluches, Funkos y accesorios únicos que harán volar tu imaginación. Aquí encontrarás
             todo lo que necesitas para completar tu colección o sorprender a ese fanático especial. ¡En ComicsLocuras, la pasión
             por el entretenimiento no tiene límites! Ven y vive la locura del coleccionismo con nosotros.
         </p>
 
-        <!-- Galería de tarjetas -->
-        <div class="gallery">
-            <div class="card">
-                <img src="{% static 'assets/img/mangas.jpeg' %}" alt="Manga">
-                <h5>Manga</h5>
+                <!-- Galería de tarjetas -->
+                <div class="gallery">
+                    <!-- Manga -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/mangas.jpeg' %}" alt="Manga">
+                        <h5>Manga</h5>
+                    </div>
+                    
+                    <!-- Comic -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/comics.jpeg' %}" alt="Comic">
+                        <h5>Comic</h5>
+                    </div>
+                    
+                    <!-- Funkopop -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/funkopop.jpeg' %}" alt="Funkopop">
+                        <h5>Funkopop</h5>
+                    </div>
+                    
+                    <!-- Peluche -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/peluches.jpeg' %}" alt="Peluche">
+                        <h5>Peluche</h5>
+                    </div>
+                    
+                    <!-- Accesorio -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/accesorios.jpeg' %}" alt="Accesorio">
+                        <h5>Accesorio</h5>
+                    </div>
+                    
+                    <!-- Login -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/login.jpg' %}" alt="Login">
+                        <h5>Login</h5>
+                    </div>
+                    
+                    <!-- Registro -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/registro.jpg' %}" alt="Registro">
+                        <h5>Registro</h5>
+                    </div>
+                    
+                    <!-- Menú lateral -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/lateral.jpg' %}" alt="Lateral">
+                        <h5>Menú lateral</h5>
+                    </div>
+                    
+                    <!-- Perfil -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/perfil.jpg' %}" alt="Perfil">
+                        <h5>Perfil</h5>
+                    </div>
+                    
+                    <!-- Editar perfil -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/editarperfil.jpg' %}" alt="Editar perfil">
+                        <h5>Editar perfil</h5>
+                    </div>
+                    
+                    <!-- Agregar productos -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/agregar.jpg' %}" alt="Agregar productos">
+                        <h5>Agregar productos</h5>
+                    </div>
+                    
+                    <!-- Editar productos -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/editar.jpg' %}" alt="Editar productos">
+                        <h5>Editar productos</h5>
+                    </div>
+                    
+                    <!-- Eliminar productos -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/eliminar.jpg' %}" alt="Eliminar productos">
+                        <h5>Eliminar productos</h5>
+                    </div>
+                    
+                    <!-- Carrito -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/carrito.jpg' %}" alt="Carrito">
+                        <h5>Carrito</h5>
+                    </div>
+                    
+                    <!-- Recuperar contraseña paso 1 -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/recuperarcontrase1.jpg' %}" alt="Recuperar contraseña 1">
+                        <h5>Recuperar contraseña paso 1</h5>
+                    </div>
+                    
+                    <!-- Recuperar contraseña paso 2 -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/recuperarcontrase2.jpg' %}" alt="Recuperar contraseña 2">
+                        <h5>Recuperar contraseña paso 2</h5>
+                    </div>
+                    
+                    <!-- API geolocalización -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/geolocalizacion.jpg' %}" alt="API geolocalizacion">
+                        <h5>API geolocalización</h5>
+                    </div>
+                    
+                    <!-- API Marvel -->
+                    <div class="card">
+                        <img src="{% static 'assets/img/marvel.jpg' %}" alt="API marvel">
+                        <h5>API Marvel</h5>
+                    </div>
+                </div>
+        
+
+    <!-- Download Section -->
+    <section class="text-center mt-5">
+        <h2 class="mb-4">Descarga la Aplicación</h2>
+        {% if is_mobile %}
+            <p>Haz clic en el siguiente enlace para descargar la APK:</p>
+            <a href="{{ apk_url }}" class="btn btn-primary btn-lg mb-4" download>
+                Descargar APK
+            </a>
+        {% else %}
+            <p>Escanea el QR para descargar la APK:</p>
+            <div class="qr-container mb-4">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ apk_url|urlencode }}&size=200x200" 
+                     alt="QR Code para descargar MotorSphere"
+                     class="img-fluid">
             </div>
-            <div class="card">
-                <img src="{% static 'assets/img/comics.jpeg' %}" alt="Comic">
-                <h5>Comic</h5>
-            </div>
-            <div class="card">
-                <img src="{% static 'assets/img/funkopop.jpeg' %}" alt="Funkopop">
-                <h5>Funkopop</h5>
-            </div>
-            <div class="card">
-                <img src="{% static 'assets/img/peluches.jpeg' %}" alt="Peluche">
-                <h5>Peluche</h5>
-            </div>
-            <div class="card">
-                <img src="{% static 'assets/img/accesorios.jpeg' %}" alt="Accesorio">
-                <h5>Accesorio</h5>
-            </div>
-        </div>
-    </div>
+        {% endif %}
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
